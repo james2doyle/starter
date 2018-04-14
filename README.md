@@ -4,10 +4,11 @@ My starter for web projects. Successor of my [james2doyle/BassProject](https://g
 
 ## Structure
 
-- ES6
 - Webpack
+- ES6
 - Offline support
 - ES lint
+- Sass
 - Add to homescreen (android)
 - [Ace.css](http://basscss.com/ace/)
 
