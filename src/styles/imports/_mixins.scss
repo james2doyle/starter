@@ -1,0 +1,77 @@
+@mixin retina {
+  // autoprefixer will polyfill this
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+// @include image-2x('../img/quality-badge', 150px, 150px, top, right, #fff);
+@mixin image-2x($image, $width, $height, $x: center, $y: center, $repeat: no-repeat, $bgcolor: none) {
+  background: url("#{$image}.png") $x $y $repeat $bgcolor;
+  @include retina {
+    /* on retina, use image that's scaled by 2 */
+    background: url("#{$image}@2x.png") $x $y $repeat $bgcolor;
+    background-size: $width $height;
+  }
+}
+
+@mixin show-when-loaded() {
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.4s ease;
+  body.loaded & {
+    opacity: 1;
+  }
+}
+
+@mixin show-when-typekit-loaded() {
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.4s ease;
+  body.typekit-loaded & {
+    opacity: 1;
+  }
+}
+
+// usage: input, textarea { @include placeholder() { color: rgba(black, 0.5) } }
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:placeholder-shown { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+@mixin overlay($level: 0.1, $gradient: 'false') {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @if $gradient == 'false' {
+      background-color: rgba(0, 0, 0, $level);
+    } @else {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, $level) 0%, rgba(0, 0, 0, 0) 100%);
+   }
+    user-select: none; // no selecting
+    pointer-events: none; // click-through
+    backface-visibility: hidden;
+  }
+}
+
+@mixin spinner-overlay($level: 0.5) {
+  @include overlay($level);
+  &:before {
+    opacity: 0;
+    background: url($spinner-img) no-repeat center rgba(black, $level); // link to image
+    transition: all 0.2s ease;
+  }
+  &.loading {
+    &:before {
+      opacity: 1;
+    }
+  }
+}

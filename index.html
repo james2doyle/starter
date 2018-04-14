@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Starter</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- minimizes latency as the DNS lookup has already taken place  -->
+  <!-- <link rel="dns-prefetch" href="//cdnjs.cloudflare.com"> -->
+  <!-- <link rel="dns-prefetch" href="//fonts.googleapis.com"> -->
+  <!-- <link rel="dns-prefetch" href="//www.google-analytics.com"> -->
+
+  <!-- for modern browsers only -->
+  <!--
+  <link rel="preconnect" href="//cdnjs.cloudflare.com">
+  <link rel="preconnect" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="//www.google-analytics.com">
+  -->
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="./manifest.json">
+  <link rel="shortcut icon" href="./favicon.ico">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Color the status bar on mobile devices -->
+  <meta name="theme-color" content="#006633">
+
+  <link rel="stylesheet" href="./dist/main.css">
+</head>
+<body>
+  <!--[if lt IE 8]>
+  <p class="browsehappy shadow-2">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="white" target="_blank">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <a id="skippy" class="sr-only sr-only-focusable" href="#main">
+    <div class="container">
+      <span>Skip to content</span>
+    </div>
+  </a>
+
+  <header class="clearfix">
+    <nav class="max-width-4 mx-auto py2" role="navigation">
+      <a class="h1" href="#">Starter</a>
+    </nav>
+  </header>
+
+  <main id="main" class="clearfix container" role="main" tabindex="-1">
+    <section class="max-width-4 mx-auto">
+      <h2>Hello World 👋</h2>
+      <h3 class="show-online">Nice! Looks like we are online! 👍</h3>
+      <h3 class="show-offline">Whoops! Looks like we are offline! 👎</h3>
+    </section>
+    <section class="max-width-4 mx-auto mt2">
+      <div class="clearfix">
+        <div class="max-width-3">
+          <h3>Form Example</h3>
+          <form accept-charset="utf-8">
+            <label class="label">Name Your Hamburger</label>
+            <input type="text" class="input" placeholder="Name your burger" />
+            <label class="label">Select Your Hamburger</label>
+            <select class="select" placeholder="Select a hamburger">
+              <option>Hamburger 1</option>
+              <option>Hamburger 2</option>
+              <option>Hamburger 3</option>
+              <option>Hamburger 4</option>
+            </select>
+            <label class="label">Hamburger Description</label>
+            <textarea class="textarea" rows="4" placeholder="Enter in your information"></textarea>
+            <div class="mb1">
+              <input type="submit" class="btn btn-primary bg-black" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="max-width-4 mx-auto text-center">
+      <div class="spinner-overlay loading p2">
+        <pre><code>&lt;div class=&quot;spinner-overlay loading&quot;&gt;
+  &lt;img src=&quot;https://placehold.it/300x300&quot; width=&quot;300&quot; height=&quot;300&quot;&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="clearfix" role="footer">
+    <div class="max-width-4 mx-auto">
+      <p>ℹ️ Open your developer tools and "go offline".</p>
+    </div>
+  </footer>
+
+  <!--
+  <script>
+    // load the service worker for this site
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
+-->
+<script src="./dist/main.js" async></script>
+</body>
+</html>

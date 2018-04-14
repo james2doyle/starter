@@ -1,0 +1,34 @@
+$body-font: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif;
+$heading-font: $body-font;
+
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+$primary: #6699CC;
+$light: #ccc;
+$mid: #777;
+$dark: #333;
+
+$danger: #C93742;
+$success: #ACC23A;
+
+$sm: 37.5em;
+$md: 48em;
+$lg: 64em;
+$xl: 85em; // make sure this is slightly bigger than .max-width-4
+$xxl: 100em; // screens mostly larger than about 1600px
+
+$breakpoint-xs: '(max-width: #{$sm})' !default;
+$breakpoint-sm: '(min-width: #{$sm})' !default;
+$breakpoint-md: '(min-width: #{$md})' !default;
+$breakpoint-lg: '(min-width: #{$lg})' !default;
+$breakpoint-xl: '(min-width: #{$xl})' !default;
+$breakpoint-xxl: '(min-width: #{$xxl})' !default;
+$breakpoint-ipad: 'only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)' !default;
+
+$golden-rule: 1.6180339887498948420;
+
+$transition: all 0.2s ease;
+
+$spinner-img: '/images/spinner.svg';

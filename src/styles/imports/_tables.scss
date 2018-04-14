@@ -1,0 +1,22 @@
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  th {
+    text-align: left;
+    padding: 1em;
+    &[align="left"] {
+      text-align: left;
+    }
+    &[align="center"], &[align="middle"] {
+      text-align: center;
+    }
+    &[align="right"] {
+      text-align: right;
+    }
+  }
+  td {
+    padding: 0.5em 1em;
+  }
+}

@@ -1,0 +1,50 @@
+// min-resolution will be polyfilled
+@media (min-resolution: 2dppx) {
+  // styles for retina screens
+}
+
+// iPhone 5:
+@media screen and (device-aspect-ratio: 40/71) {
+  // styles for iPhone 5
+}
+
+// iPhone 6:
+@media screen and (device-aspect-ratio: 375/667) {
+  // styles for iPhone 6
+}
+
+// iPhone 6 and 6+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) {
+  // styles for iPhone 6 and 6+
+}
+
+@media #{$breakpoint-sm} {
+  // styles for $breakpoint-sm
+}
+
+@media #{$breakpoint-md} {
+  // styles for $breakpoint-md
+}
+
+@media #{$breakpoint-lg} {
+  // styles for $breakpoint-lg
+}
+
+@media #{$breakpoint-xl} {
+  // styles for $breakpoint-xl
+}
+
+@media #{$breakpoint-xxl} {
+  // styles for $breakpoint-xxl
+}
+
+@media #{$breakpoint-ipad} {
+  // .xs-hide.sm-hide {
+  //   display: block !important;
+  // }
+}
+
+/* IE10+ CSS styles go here */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  // styles for IE10+
+}

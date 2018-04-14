@@ -1,0 +1,96 @@
+@import '../../node_modules/ace-css/css/ace.min.css';
+
+@import './imports/_variables.scss';
+@import './imports/_mixins.scss';
+
+::selection {
+  background-color: $primary;
+  background-color: rgba($primary, 0.5);
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+body {
+  font: normal normal normal 16px/#{$golden-rule} $body-font;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  &.is-offline {
+    background-color: $danger;
+  }
+  &.is-offline {
+    .show-offline {
+      display: initial;
+    }
+    .show-online {
+      display: none;
+    }
+  }
+}
+
+// default links without classes
+a[href]:not([class]) {
+  color: $primary;
+  text-decoration: underline;
+}
+
+.show-offline {
+  display: none;
+}
+
+.show-online {
+  display: initial;
+}
+
+.browsehappy {
+  margin: 0;
+  padding: 1rem 0;
+  color: white;
+  text-align: center;
+  background-color: $primary;
+}
+
+#main:focus {
+  outline: none;
+}
+
+#skippy {
+  display: block;
+  padding: 1em 0;
+  color: white;
+  background-color: $primary;
+  outline: 0;
+  span {
+    padding: .5em;
+    outline: 1px dotted;
+  }
+}
+
+.show-on-load {
+  @include show-when-loaded();
+}
+
+.show-on-typekit {
+  @include show-when-typekit-loaded();
+}
+
+.overlay {
+  @include overlay(0.75);
+}
+
+.spinner-overlay {
+  @include spinner-overlay(0.75);
+}
+
+@import './imports/_tables.scss';
+@import './imports/_helpers.scss';
+@import './imports/_mediaqueries.scss';
