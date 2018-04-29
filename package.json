@@ -4,9 +4,9 @@
   "description": "A simple starter template for sites and progressive web apps",
   "main": "index.html",
   "scripts": {
-    "dev": "NODE_ENV=development webpack --progress --hide-modules --config=webpack.config.js",
-    "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=webpack.config.js",
-    "build": "NODE_ENV=production webpack --no-progress --hide-modules --config=webpack.config.js"
+    "dev": "NODE_ENV=development ./node_modules/.bin/webpack --progress --hide-modules --config=webpack.config.js",
+    "watch": "NODE_ENV=development ./node_modules/.bin/webpack --watch --progress --hide-modules --config=webpack.config.js",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack --no-progress --hide-modules --config=webpack.config.js"
   },
   "engines": {
     "node": ">=9.0",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel": "^6.23.0",
-    "babel-core": "^6.23.1",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.22.0",
@@ -34,12 +34,12 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.11.0",
     "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.9",
     "optimize-css-assets-webpack-plugin": "^4.0.0",
     "sass-loader": "^7.0.1",
-    "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "^4.5.0",
-    "webpack-cli": "^2.0.14"
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.6",
+    "webpack-cli": "^2.0.15"
   },
   "dependencies": {
     "ace-css": "^1.1.0"
