@@ -9,16 +9,16 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <!-- minimizes latency as the DNS lookup has already taken place  -->
-  <!-- <link rel="dns-prefetch" href="//cdnjs.cloudflare.com"> -->
-  <!-- <link rel="dns-prefetch" href="//fonts.googleapis.com"> -->
-  <!-- <link rel="dns-prefetch" href="//www.google-analytics.com"> -->
+  <!-- perform DNS lookups on a page in the background -->
+  <!-- <link href="https://cdnjs.cloudflare.com" rel="dns-prefetch"> -->
+  <!-- <link href="https://fonts.googleapis.com" rel="dns-prefetch"> -->
+  <!-- <link href="https://www.google-analytics.com" rel="dns-prefetch"> -->
 
-  <!-- for modern browsers only -->
+  <!-- setup early connections before an HTTP request is actually sent to the server -->
   <!--
-  <link rel="preconnect" href="//cdnjs.cloudflare.com">
-  <link rel="preconnect" href="//fonts.googleapis.com">
-  <link rel="preconnect" href="//www.google-analytics.com">
+  <link href="https://cdnjs.cloudflare.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com" rel="preconnect" crossorigin>
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
   -->
 
   <!-- Web Application Manifest -->
@@ -30,7 +30,7 @@
 
   <!-- Color the status bar on mobile devices -->
   <meta name="theme-color" content="#006633">
-
+  <link rel="preload" href="./dist/main.css" as="style">
   <link rel="stylesheet" href="./dist/main.css">
 </head>
 <body>
