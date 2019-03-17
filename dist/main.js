@@ -106,38 +106,15 @@ module.exports = __webpack_require__(1);
 __webpack_require__.r(__webpack_exports__);
 
 // CONCATENATED MODULE: ./src/scripts/app/index.js
-class App {
-  constructor() {
-    document.addEventListener('DOMContentLoaded', () => {
-      document.body.className += ' loaded';
-    });
-  }
-}
+class App{constructor(){document.addEventListener('DOMContentLoaded',()=>{document.body.className+=' loaded';});}}
 
 // CONCATENATED MODULE: ./src/scripts/utils/offline.js
-function offline() {
-  const initialize = () => {
-    const networkStatus = () => {
-      document.body.classList.toggle('is-offline', !navigator.onLine);
-    };
-
-    window.addEventListener('online', networkStatus);
-    window.addEventListener('offline', networkStatus);
-
-    networkStatus();
-  };
-
-  window.addEventListener('load', initialize);
-}
+function offline(){const initialize=()=>{const networkStatus=()=>{document.body.classList.toggle('is-offline',!navigator.onLine);};window.addEventListener('online',networkStatus);window.addEventListener('offline',networkStatus);networkStatus();};window.addEventListener('load',initialize);};
 
 // CONCATENATED MODULE: ./src/scripts/index.js
 
 
-
-window.App = new App();
-
-offline();
-
+window.App=new App();offline();
 
 /***/ })
 /******/ ]);
