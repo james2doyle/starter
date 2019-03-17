@@ -4,8 +4,7 @@ My starter for web projects. Successor of my [james2doyle/BassProject](https://g
 
 ## Structure
 
-- Webpack
-- ES6
+- Webpack ([with swc-loader](https://swc-project.github.io/))
 - Offline support
 - ES lint
 - Sass
