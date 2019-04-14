@@ -5,6 +5,7 @@ const ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
   mode: ENV,
+  devtool: ENV === 'development' ? 'inline-source-map' : false,
   watchOptions: {
     poll: true,
   },
