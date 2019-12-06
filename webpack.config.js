@@ -33,8 +33,9 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /(node_modules)/,
         use: {
-          // `.swcrc` can be used to configure swc
           loader: 'swc-loader',
+          // load the config
+          options: require('./swcrc.json'),
         },
       },
       {
