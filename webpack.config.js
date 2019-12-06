@@ -34,7 +34,7 @@ module.exports = {
         exclude: /(node_modules)/,
         use: {
           loader: 'swc-loader',
-          // load the config
+          // load the config manually because the swc-loader doesnt seem to load the .swcrc
           options: require('./swcrc.json'),
         },
       },
