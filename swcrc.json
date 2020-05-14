@@ -1,8 +1,8 @@
 {
   "minify": true,
-  "sourceMap": false,
+  "sourceMap": true,
   "jsc": {
-    "target": "es2017",
+    "target": "es2015",
     "parser": {
       "syntax": "ecmascript",
       "jsx": false,
@@ -15,10 +15,12 @@
       "decorators": false,
       "decoratorsBeforeExport": false
     },
-    "optimizer": {
-      "globals": {
-        "vars": {
-          "__DEBUG__": "true"
+    "transform": {
+      "optimizer": {
+        "globals": {
+          "vars": {
+            "__DEBUG__": "true"
+          }
         }
       }
     }
